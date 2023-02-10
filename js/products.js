@@ -1,8 +1,10 @@
 //================Function fetchBooks================//
 //  Fetches books from desired API using access token with try, catch statement
+const ROOT_URL = process.env.ROOT_URL;
+
 async function fetchBooks() {
     try {
-        const response = await fetch("https://group-repo-api-production.up.railway.app/books",
+        const response = await fetch(ROOT_URL + "/books",
         {   
             //  Gaining access to API using Token
             method: 'GET',

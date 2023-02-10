@@ -1,4 +1,4 @@
-const ROOT_URL = "https://group-repo-api-production.up.railway.app";
+const ROOT_URL = process.env.ROOT_URL;
 
 //Steps to extract information from url
 let queryString = location.search;

@@ -2,6 +2,7 @@
  * 4. Now you can fetch the specific pun by making a "GET" request to: https://pun-api.up.railway.app/puns/<punId>, where <punId> is the value of urlParams.get('id')
  * 5. Use the fetched pun data to prefill the textarea#content
   */
+const ROOT_URL = process.env.ROOT_URL;
 
  let urlParams = new URLSearchParams(window.location.search)
 
@@ -15,7 +16,7 @@ const img = document.getElementById("book-img-spesific")
 
 async function fetchBooks() {
     try {
-        const response = await fetch("https://group-repo-api-production.up.railway.app/books/" + urlParams.get('id'),
+        const response = await fetch(ROOT_URL + "/books/" + urlParams.get('id'),
         {   
             method: 'GET',
             headers: {
